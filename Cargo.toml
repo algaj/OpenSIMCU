@@ -1,5 +1,5 @@
 [package]
-name = "OpenSIMCU"
+name = "open_simcu"
 version = "0.1.0"
 edition = "2021"
 
