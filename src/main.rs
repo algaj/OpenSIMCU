@@ -1,3 +1,18 @@
+struct PinID {
+    device_id: usize,
+    pin_index: usize,
+}
+
+#[derive(Default)]
+struct Net {
+    value: bool,
+    connected_io: Vec<PinID>,
+}
+
+struct Circuit {
+    nets: Vec<Net>,
+}
+
 #[derive(Debug)]
 struct Device6502 {
     /* Memories and registers, external state */
@@ -44,11 +59,21 @@ impl Device6502 {
 
 }
 
+struct Device28C256;
 
+impl Device28C256 {
+    pub fn new() -> Self {
+        Self
+    }
+
+
+}
 
 fn main() {
 
     println!("Started");
+
+    let mut net1: Net = Net::default();
 
     let mut device = Device6502::new();
 
